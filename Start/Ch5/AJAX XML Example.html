@@ -8,29 +8,28 @@
     <link rel="stylesheet" href="style_AJAX XML Example.css" />
   </head>
   <!--
-  
- 
-  -->
+Artist: Bob Dylan
+Title: Empire Burlesque
+Year: 1985
+
+
+
+<tr>
+  <th>ARTIST</th>
+  <th>TITLE</th>
+</tr>
+<tr onclick="displayCD(i)">
+  <td>Bob Dylan</td>
+  <td>Empire Burlesque</td>
+</tr>
+<tr>
+  <td>Bonnie Tyler</td>
+  <td>Hide your heart</td>
+</tr>
+-->
   <body>
-    <!-- <table id="demo">
-      <tr>
-        <th>Artist</th>
-        <th>Title</th>
-      </tr>
-      <tr>
-        <td>Bob Dylan</td>
-        <td>Empire Burlesque</td>
-      </tr>
-      <tr>
-        <td>Bonnie Tyler</td>
-        <td>Hide your heart</td>
-      </tr>
-    </table> -->
-
-    <h2>The XMLHttpRequest Object</h2>
-
-    <button type="button" onclick="loadDoc()">Get my CD collection</button>
-    <br /><br />
+    <p>Click on a CD to display album information.</p>
+    <p id="showCD"></p>
     <table id="demo"></table>
   </body>
 </html>
