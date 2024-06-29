@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window localStorage</title>
+  </head>
+  <!-- 
+The Window Object
+
+Click me!
+
+Number of clicks:
+
+10
+
+Click the button to see the counter increase.
+
+Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).
+
+Smith
+  -->
+  <body>
+    <h2>The Window Object</h2>
+    <button type="button" onclick="clickCounter()">Click me!</button>
+    <p>Number of clicks:</p>
+    <p id="demo"></p>
+
+    <script>
+      clickCounter();
+      function clickCounter() {
+        if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+          localStorage.clickcount = 1;
+        }
+        document.getElementById("demo").innerHTML = localStorage.clickcount;
+      }
+    </script>
+  </body>
+</html>
