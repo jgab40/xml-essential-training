@@ -4,21 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS JSON</title>
+    <script src="script_json.js"></script>
   </head>
   <!-- 
-
-["John","Peter","Sally","Jane"]
+Fetch a JSON file with XMLHttpRequest
+John
   -->
   <body>
-    <h2>Create a JSON string from a JavaScript array.</h2>
+    <h2>Access Array Values</h2>
 
     <p id="demo"></p>
-
     <script>
-      const myArr = ["John", "JG", "Olivier", "Hello"];
-      const myString = JSON.stringify(myArr);
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+      };
+      xmlhttp.open("GET", "json_demo.txt");
+      xmlhttp.send;
 
-      console.log(myString);
+      // const xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onload = function () {
+      //   const myObj = JSON.parse(this.responseText);
+      //   document.getElementById("demo").innerHTML = myObj.name;
+      // };
+      // xmlhttp.open("GET", "json_demo.txt");
+      // xmlhttp.send();
     </script>
   </body>
 </html>
